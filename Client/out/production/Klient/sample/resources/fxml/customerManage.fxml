@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ManageCustomerController">
+    <children>
+        <SplitPane dividerPositions="0.0959119496855346" orientation="VERTICAL" prefHeight="638.0" prefWidth="1328.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="673.0">
+                    <children>
+                        <Button fx:id="showDvdBtn" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddDvd" prefHeight="61.0" prefWidth="92.0" text="DVD" />
+                        <Button layoutX="92.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="92.0" text="KLIENCI" />
+                        <Button fx:id="showRentalAddBtn" layoutX="184.0" layoutY="-3.0" mnemonicParsing="false" onAction="#showAddRental" prefHeight="61.0" prefWidth="130.0" text="WYPOŻYCZENIA" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="567.0" prefWidth="673.0">
+                    <children>
+                        <Separator layoutX="86.0" orientation="VERTICAL" prefHeight="572.0" prefWidth="3.0" />
+                        <Button fx:id="showAddCustomerBtn" layoutX="12.0" layoutY="21.0" mnemonicParsing="false" onAction="#showAddCustomer" prefHeight="32.0" prefWidth="70.0" text="Dodaj" />
+                        <Button layoutX="12.0" layoutY="81.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="70.0" text="Zarządzaj" />
+                  <TableView fx:id="table_info" layoutX="88.0" layoutY="1.0" prefHeight="507.0" prefWidth="1238.0">
+                    <columns>
+                      <TableColumn fx:id="id_col" prefWidth="44.0" text="ID" />
+                      <TableColumn fx:id="name_col" editable="true" prefWidth="106.0" text="IMIE" />
+                        <TableColumn fx:id="surname_col" prefWidth="94.0" text="NAZWISKO" />
+                        <TableColumn fx:id="place_col" prefWidth="119.0" text="MIEJSCOWOSC" />
+                        <TableColumn fx:id="postalCode_col" prefWidth="124.0" text="KOD POCZTOWY" />
+                        <TableColumn fx:id="house_col" prefWidth="106.0" text="NR.DOMU" />
+                        <TableColumn fx:id="city_col" prefWidth="84.0" text="MIASTO" />
+                        <TableColumn fx:id="email_col" prefWidth="128.0" text="EMAIL" />
+                        <TableColumn fx:id="phone_col" prefWidth="167.0" text="NR.TELEFONU" />
+                        <TableColumn fx:id="delete_col" prefWidth="89.0" text="USUN" />
+                        <TableColumn fx:id="update_col" prefWidth="165.0" text="AKTUALIZUJ" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="119.0" layoutY="531.0" text="Szukaj:" />
+                  <TextField fx:id="searchField" layoutX="182.0" layoutY="527.0" onKeyTyped="#searchForCustomer" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ManageDvdController">
+   <children>
+      <SplitPane dividerPositions="0.10283687943262411" orientation="VERTICAL" prefHeight="566.0" prefWidth="942.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="72.0" prefWidth="727.0">
+               <children>
+                  <Button layoutY="-4.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="92.0" text="DVD" />
+                  <Button fx:id="showCustomerBtn" layoutX="92.0" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddCustomer" prefHeight="61.0" prefWidth="92.0" text="KLIENCI" />
+                   <Button fx:id="showRentalAddBtn" layoutX="184.0" layoutY="-3.0" mnemonicParsing="false" onAction="#showAddRental" prefHeight="61.0" prefWidth="130.0" text="WYPOŻYCZENIA" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="751.0">
+               <children>
+                  <Separator layoutX="86.0" orientation="VERTICAL" prefHeight="503.0" prefWidth="6.0" />
+                  <Button fx:id="addBtn" layoutY="25.0" mnemonicParsing="false" onAction="#showAddDvd" prefHeight="41.0" prefWidth="85.0" text="Dodaj" />
+                  <Button layoutY="81.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="85.0" text="Zarządzaj" />
+                  <TableView fx:id="table_info" layoutX="92.0" layoutY="2.0" prefHeight="454.0" prefWidth="851.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" editable="false" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="col_name" prefWidth="75.0" text="NAZWA" />
+                        <TableColumn fx:id="col_price" prefWidth="75.0" text="CENA" />
+                        <TableColumn fx:id="col_genre" prefWidth="75.0" text="GATUNEK" />
+                        <TableColumn fx:id="col_realase" prefWidth="75.0" text="ROK WYDANIA" />
+                        <TableColumn fx:id="col_director" prefWidth="75.0" text="REZYSER" />
+                        <TableColumn fx:id="col_countity" prefWidth="75.0" text="ILOSC" />
+                        <TableColumn fx:id="col_delete" prefWidth="75.0" text="USUN" />
+                        <TableColumn fx:id="col_update" prefWidth="110.0" text="AKTUALIZUJ" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="92.0" layoutY="472.0" text="Szukaj:" />
+                  <TextField fx:id="searchField" layoutX="160.0" layoutY="468.0" onKeyTyped="#searchForDvd" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

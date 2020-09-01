@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ManageRentalController">
+    <children>
+        <SplitPane dividerPositions="0.08275862068965517" orientation="VERTICAL" prefHeight="727.0" prefWidth="1330.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="72.0" prefWidth="727.0">
+                    <children>
+                        <Button fx:id="showDvdBtn" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddDvd" prefHeight="61.0" prefWidth="92.0" text="DVD" />
+                        <Button fx:id="showCustomerBtn" layoutX="92.0" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddCustomer" prefHeight="61.0" prefWidth="92.0" text="KLIENCI" />
+                        <Button layoutX="184.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="WYPOŻYCZENIA" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="1014.0">
+                    <children>
+                        <Separator layoutX="86.0" orientation="VERTICAL" prefHeight="662.0" prefWidth="0.0" />
+                        <Button fx:id="showAddRentalBtn" layoutY="25.0" mnemonicParsing="false" onAction="#showAddRental" prefHeight="41.0" prefWidth="85.0" text="Dodaj" />
+                        <Button layoutY="81.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="85.0" text="Zarządzaj" />
+                  <TableView fx:id="table_info" layoutX="92.0" layoutY="2.0" prefHeight="383.0" prefWidth="797.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="132.99996948242188" text="ID Wypożyczenia" />
+                      <TableColumn fx:id="col_idCust" prefWidth="65.00006103515625" text="ID Klienta" />
+                        <TableColumn fx:id="col_personalData" prefWidth="134.99996948242188" text="Dane osobowe" />
+                        <TableColumn fx:id="col_phoneNumber" prefWidth="91.0" text="Nr.telefonu" />
+                        <TableColumn fx:id="col_idMovie" prefWidth="78.0" text="ID Filmu" />
+                        <TableColumn fx:id="col_title" prefWidth="70.0" text="Tytuł" />
+                        <TableColumn fx:id="col_realaseDate" text="Rok wydania" />
+                        <TableColumn fx:id="col_return" prefWidth="89.0" text="Zwróć" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchField" layoutX="184.0" layoutY="399.0" onKeyTyped="#searchForRental" />
+                  <Label layoutX="109.0" layoutY="403.0" text="Szukaj:" />
+
+                    </children>
+
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

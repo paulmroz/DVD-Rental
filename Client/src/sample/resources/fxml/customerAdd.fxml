@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddCustomerController">
+    <children>
+        <SplitPane dividerPositions="0.055" orientation="VERTICAL" prefHeight="500.0" prefWidth="675.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="673.0">
+                    <children>
+                        <Button fx:id="showDvdBtn" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddDvd" prefHeight="30.0" prefWidth="92.0" text="DVD" />
+                        <Button layoutX="92.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" text="KLIENCI" />
+                        <Button fx:id="showRentalAddBtn" layoutX="184.0" layoutY="-3.0" mnemonicParsing="false" onAction="#showAddRental" prefHeight="30.0" prefWidth="130.0" text="WYPOŻYCZENIA" />
+
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="567.0" prefWidth="673.0">
+                    <children>
+                        <Separator layoutX="86.0" orientation="VERTICAL" prefHeight="540.0" prefWidth="1.0" />
+                  <Button layoutX="0.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="85.0" text="Dodaj" />
+                  <Button fx:id="showManageCustomer" layoutX="0.0" layoutY="81.0" mnemonicParsing="false" onAction="#showManageCustomer" prefHeight="45.0" prefWidth="85.0" text="Zarządzaj" />
+                  <Label layoutX="127.0" layoutY="29.0" text="Dodawanie Klienta:" />
+                  <Label layoutX="127.0" layoutY="73.0" text="Imię:" />
+                  <Label layoutX="127.0" layoutY="123.0" text="Nazwisko:" />
+                  <Label layoutX="127.0" layoutY="173.0" text="Miejscowość:" />
+                  <Label layoutX="127.0" layoutY="223.0" text="Nr. mieszkania:" />
+                  <Label layoutX="126.0" layoutY="273.0" text="Adres E-mail:" />
+                  <Label layoutX="405.0" layoutY="173.0" text="Kod pocztowy:" />
+                  <Label layoutX="405.0" layoutY="223.0" text="Miasto:" />
+                  <Label layoutX="124.0" layoutY="323.0" text="Numer telefonu:" />
+                  <TextField fx:id="nameField" layoutX="221.0" layoutY="73.0" />
+                  <TextField fx:id="surnameField" layoutX="221.0" layoutY="123.0" />
+                  <TextField fx:id="villageField" layoutX="221.0" layoutY="173.0" />
+                  <TextField fx:id="postCodeField" layoutX="503.0" layoutY="173.0" />
+                  <TextField fx:id="apartamentNumberField" layoutX="221.0" layoutY="223.0" />
+                  <TextField fx:id="cityField" layoutX="503.0" layoutY="223.0" />
+                  <TextField fx:id="emailField" layoutX="221.0" layoutY="273.0" />
+                  <TextField fx:id="phoneNumberField" layoutX="221.0" layoutY="323.0" />
+                  <Button fx:id="clearCustomerBtn" layoutX="325.0" layoutY="375.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="35.0" prefWidth="85.0" text="Wyczyść" />
+                  <Button fx:id="addCustomerBtn" layoutX="200.0" layoutY="375.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="35.0" prefWidth="85.0" text="Dodaj" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

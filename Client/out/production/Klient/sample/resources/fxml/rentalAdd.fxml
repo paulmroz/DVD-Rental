@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddRentalController">
+    <children>
+        <SplitPane dividerPositions="0.05" orientation="VERTICAL" prefHeight="727.0" prefWidth="1330.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="72.0" prefWidth="727.0">
+                    <children>
+                        <Button fx:id="showDvdBtn" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddDvd" prefHeight="30.0" prefWidth="92.0" text="DVD" />
+                        <Button fx:id="showCustomerBtn" layoutX="92.0" layoutY="-4.0" mnemonicParsing="false" onAction="#showAddCustomer" prefHeight="30.0" prefWidth="92.0" text="KLIENCI" />
+                        <Button layoutX="184.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="WYPOŻYCZENIA" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="1014.0">
+                    <children>
+                        <Separator layoutX="86.0" orientation="VERTICAL" prefHeight="662.0" prefWidth="0.0" />
+                        <Button layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="85.0" text="Dodaj" />
+                        <Button fx:id="showManageBtn" layoutY="81.0" mnemonicParsing="false" onAction="#showMangaeRental" prefHeight="45.0" prefWidth="85.0" text="Zarządzaj" />
+
+                            <Label  layoutX="93.0" layoutY="15.0" text="Tabela Klinetów"/>
+                        <TableView fx:id="table_info" layoutX="88.0" layoutY="45.0" prefHeight="100.0" prefWidth="1000.0">
+                            <columns>
+                                <TableColumn fx:id="id_col" editable="false" prefWidth="35.0" text="ID" />
+                                <TableColumn fx:id="name_col" editable="false" prefWidth="91.00003051757812" text="IMIE" />
+                                <TableColumn fx:id="surname_col" editable="false" prefWidth="94.99996948242188" text="NAZWISKO" />
+                                <TableColumn fx:id="place_col" editable="false" prefWidth="142.0" text="MIEJSCOWOSC" />
+                                <TableColumn fx:id="postalCode_col" editable="false" prefWidth="124.0" text="KOD POCZTOWY" />
+                                <TableColumn fx:id="house_col" editable="false" prefWidth="106.0" text="NR.DOMU" />
+                                <TableColumn fx:id="city_col" editable="false" prefWidth="84.0" text="MIASTO" />
+                                <TableColumn fx:id="email_col" editable="false" prefWidth="128.0" text="EMAIL" />
+                                <TableColumn fx:id="phone_col" editable="false" prefWidth="109.0" text="NR.TELEFONU" />
+                            </columns>
+                        </TableView>
+
+                        <Label layoutX="93.0" layoutY="160.0" text="Szukaj:" />
+                        <TextField fx:id="searchField" layoutX="182.0" layoutY="160.0" onKeyTyped="#searchForCustomer" />
+
+                        <Label  layoutX="93.0" layoutY="190" text="Tabela Klinetów"/>
+                        <TableView fx:id="table_info_dvd" layoutX="88.0" layoutY="220.0" prefHeight="100.0" prefWidth="1000.0">
+                            <columns>
+                                <TableColumn fx:id="col_id" editable="false" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="col_name" prefWidth="75.0" text="NAZWA" />
+                                <TableColumn fx:id="col_price" prefWidth="75.0" text="CENA" />
+                                <TableColumn fx:id="col_genre" prefWidth="200.0" text="GATUNEK" />
+                                <TableColumn fx:id="col_realase" prefWidth="75.0" text="ROK WYDANIA" />
+                                <TableColumn fx:id="col_director" prefWidth="75.0" text="REZYSER" />
+                                <TableColumn fx:id="col_countity" prefWidth="75.0" text="ILOSC" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="93.0" layoutY="335.0" text="Szukaj:" />
+                        <TextField fx:id="searchFieldDvd" layoutX="180.0" layoutY="335.0" onKeyTyped="#searchForDvd" />
+
+                        <Label fx:id="selectedCustomer" layoutX="124.0" layoutY="420.0" prefHeight="17.0" prefWidth="183.0" />
+                        
+                        <Button fx:id="pickButton" layoutX="1100" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCustomer" prefHeight="30.0" prefWidth="100.0" text="Wybierz" />
+                        <Button fx:id="pickButton_dvd" layoutX="1100.0" layoutY="260.0" mnemonicParsing="false" onAction="#chooseDvd" prefHeight="30.0" prefWidth="100.0" text="Wybierz" />
+                         <ListView fx:id="pickedDvd" layoutX="388.0" layoutY="420.0" prefHeight="200.0" prefWidth="200.0" />
+                      <Button fx:id="deleteFromChoosenDvd" layoutX="488.0" layoutY="610.0" mnemonicParsing="false" onAction="#deleteFromSelectedDvd" text="Usuń" prefHeight="30.0" prefWidth="100.0" />
+
+                        <Button fx:id="rentDvd" layoutX="388.0" layoutY="610.0" mnemonicParsing="false" onAction="#rentDvds" text="Wypożycz" prefHeight="30.0" prefWidth="100.0" />
+                  <Label layoutX="388.0" layoutY="380.0" text="Wybrane plyty:" />
+                  <Label layoutX="124.0" layoutY="380.0" text="Wybrany klient:" />
+                  <Label layoutX="784.0" layoutY="380.0" text="Komunikat z serwera:" />
+                  <Label fx:id="msgFromServer" layoutX="784.0" layoutY="420.0" prefHeight="17.0" prefWidth="365.0" />
+                  <Label layoutX="620.0" layoutY="380.0" text="Kwota" />
+                  <Label fx:id="kwota" layoutX="620.0" layoutY="400.0" prefHeight="17.0" prefWidth="113.0" text="0" />
+
+
+                    </children>
+
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

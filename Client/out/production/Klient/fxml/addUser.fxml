@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="300.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddUser">
+   <children>
+      <Label layoutX="27.0" layoutY="14.0" text="Zaloguj się aby dodać użytkownika!" />
+      <Button fx:id="createButton" layoutX="130.0" layoutY="250.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj" />
+          <Label fx:id="labelUserName1" layoutY="42.0" layoutX="40.0" text="Login:"/>
+      <TextField fx:id="inputUserName1" layoutX="110.0" layoutY="42.0" />
+          <Label fx:id="labelUserPass1" layoutY="73.0" layoutX="40.0" text="Hasło:"/>
+      <TextField fx:id="inputUserPass1" layoutX="110.0" layoutY="73.0" />
+      <Label layoutX="26.0" layoutY="128.0" text="Dodawanie:" />
+         <Label fx:id="labelUserName2" layoutY="159.0" layoutX="40.0" text="Login:"/>
+      <TextField fx:id="inputUserName2" layoutX="110.0" layoutY="159.0"/>
+      <Label fx:id="labelUserPass2" layoutY="190.0" layoutX="40.0" text="Login:"/>
+      <TextField fx:id="inputUserPass2" layoutX="110.0" layoutY="190.0"/>
+   </children>
+</AnchorPane>
